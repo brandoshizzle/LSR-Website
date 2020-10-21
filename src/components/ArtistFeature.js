@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import album from "../images/album.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";

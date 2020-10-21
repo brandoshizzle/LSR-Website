@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import spotifylogo from "../images/spotifylogo.png";
-import spotifylisten from "../images/listenonspotify.png";
+// import spotifylisten from "../images/listenonspotify.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "../App.css";
 import Overlay from "./Overlay";
-import ArtistFeature from "./ArtistFeature";
+// import ArtistFeature from "./ArtistFeature";
 
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
@@ -21,20 +21,20 @@ function ArtistList(props) {
 function Landing() {
 	const [page, setPage] = useState("");
 	const [artistList, setArtistList] = useState([]);
-	const [featureOpacity, setFeatureOpacity] = useState(0);
+	// const [featureOpacity, setFeatureOpacity] = useState(0);
 	// const [artistCounter, setArtistCounter] = useState(0);
 
 	const linkClick = (event) => {
 		setPage(event.target.dataset.page);
 	};
 
-	const artistClick = (event) => {
-		setFeatureOpacity(1);
-	};
+	// const artistClick = (event) => {
+	// 	setFeatureOpacity(1);
+	// };
 
-	const artistClose = (event) => {
-		setFeatureOpacity(0);
-	};
+	// const artistClose = (event) => {
+	// 	setFeatureOpacity(0);
+	// };
 
 	const artists = [
 		["David Oake", "https://www.spotify.com"],
@@ -47,7 +47,7 @@ function Landing() {
 			name={artistInfo[0]}
 			link={artistInfo[1]}
 			key={artistInfo[0]}
-			artistClick={artistClick}
+			// artistClick={artistClick}
 		/>
 	));
 
@@ -107,7 +107,7 @@ function Landing() {
 
 				<div style={{ marginTop: "auto", width: "100%" }}>
 					<img
-						src={spotifylisten}
+						src={spotifylogo}
 						className="spotify-logo"
 						alt="logo"
 					/>
