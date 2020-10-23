@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 function Overlay(props) {
 	if (props.page === "artistroster") {

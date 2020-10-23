@@ -20,7 +20,7 @@ function ArtistList(props) {
 
 function Landing() {
 	const [page, setPage] = useState("");
-	const [artistList, setArtistList] = useState([]);
+	// const [artistList, setArtistList] = useState([]);
 	// const [featureOpacity, setFeatureOpacity] = useState(0);
 	// const [artistCounter, setArtistCounter] = useState(0);
 
