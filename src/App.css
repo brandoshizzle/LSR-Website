@@ -10,7 +10,7 @@
 	/* pointer-events: none; */
 	margin-top: 50px;
 	cursor: pointer;
-	opacity: 0.7;
+	opacity: 1;
 	transition: 1s;
 	text-align: center;
 	/* box-shadow: 0px 2px 5px #555; */
@@ -45,7 +45,7 @@ html {
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
-	background: url(./images/bg2.jpg) no-repeat center bottom fixed;
+	background: url(./images/bg2-min.jpg) no-repeat center bottom fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -103,7 +103,7 @@ a:visited {
 
 .fade-enter.fade-enter-active {
 	opacity: 1;
-	transition: opacity 1000ms ease-in;
+	transition: opacity 2000ms ease-in;
 }
 .fade-appear {
 	opacity: 0.01;

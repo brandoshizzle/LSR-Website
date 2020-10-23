@@ -10,8 +10,11 @@ import Overlay from "./Overlay";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 function ArtistList(props) {
+	const delay = 2000 + props.number * 500;
 	return (
-		<li onClick={props.artistClick}>
+		<li
+			onClick={props.artistClick}
+			style={{ transitionDelay: `${delay}ms` }}>
 			<a href={props.link}>{props.name}</a>
 			{/* <a href="#">{props.name}</a> */}
 		</li>
@@ -39,13 +42,18 @@ function Landing() {
 	const artists = [
 		["David Oake", "https://www.spotify.com"],
 		["Doug Parth", "https://www.spotify.com"],
-		["Backpack Frontpack", "https://www.spotify.com"],
+		[
+			"Backpack Frontpack",
+			"https://open.spotify.com/artist/7yk1esI2Pvfrv7PLWf1zFQ",
+		],
+		["R I V E R", "https://open.spotify.com/album/5urdYZgEf5Wm6Tl9mjkArD"],
 	];
 
 	const artistComponents = artists.map((artistInfo, index) => (
 		<ArtistList
 			name={artistInfo[0]}
 			link={artistInfo[1]}
+			number={index}
 			key={artistInfo[0]}
 			// artistClick={artistClick}
 		/>
@@ -64,14 +72,20 @@ function Landing() {
 						position: "fixed",
 						top: 10,
 					}}>
-					<h1
-						style={{
-							margin: 0,
-							fontWeight: 300,
-						}}>
-						LITTLE <span style={{ fontWeight: 400 }}>SYMPHONY</span>
-					</h1>
-					{/* <h1
+					<ReactCSSTransitionGroup
+						transitionName="fade"
+						transitionAppear={true}
+						transitionAppearTimeout={5000}>
+						<h1
+							style={{
+								margin: 0,
+								fontWeight: 300,
+								transitionDelay: "500ms",
+							}}>
+							LITTLE{" "}
+							<span style={{ fontWeight: 400 }}>SYMPHONY</span>
+						</h1>
+						{/* <h1
 						style={{
 							textAlign: "left",
 							margin: 0,
@@ -79,13 +93,19 @@ function Landing() {
 						}}>
 						SYMPHONY
 					</h1> */}
-					<h1
-						style={{
-							margin: 0,
-						}}>
-						<span style={{ fontWeight: 300 }}>RECORDS</span>
-					</h1>
-
+						<h1
+							style={{
+								margin: 0,
+								transitionDelay: "1000ms",
+							}}>
+							<span
+								style={{
+									fontWeight: 300,
+								}}>
+								RECORDS
+							</span>
+						</h1>
+					</ReactCSSTransitionGroup>
 					{/* Artist Feature */}
 					{/* <ReactCSSTransitionGroup
 						transitionName="fade"
@@ -132,7 +152,7 @@ function Landing() {
 					<ReactCSSTransitionGroup
 						transitionName="fade"
 						transitionAppear={true}
-						transitionAppearTimeout={2000}
+						transitionAppearTimeout={5000}
 						transitionEnterTimeout={1000}
 						transitionLeaveTimeout={300}>
 						{artistComponents}
