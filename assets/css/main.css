@@ -1,6 +1,7 @@
 :root {
   --bg: #1f0100;
-  --accent: hsl(55, 25%, 54%);
+  /* --accent: hsl(55, 25%, 54%); */
+  --accent: #b4c671;
   --grey: #7e7b5c;
 }
 
@@ -505,7 +506,7 @@ body {
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
-  background-color: var(--accent);
+  background-color: var(--grey);
   border: none;
   opacity: 0;
   visibility: hidden;
@@ -601,7 +602,7 @@ body {
   content: "06";
 }
 .side-nav li.is-active {
-  color: var(--accent);
+  color: var(--grey);
   -webkit-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
 }
@@ -1266,6 +1267,7 @@ body {
   -ms-flex-pack: end;
   justify-content: space-between;
   margin: 0 auto;
+  margin-top: 20px;
 }
 @media (max-width: 1180px) {
   .contact--lockup {
@@ -1352,7 +1354,7 @@ body {
   }
 }
 .hire h2 {
-  margin: 0 0 20px 0;
+  margin: 0px;
   font-size: 30px;
   text-align: center;
 }
@@ -1380,7 +1382,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  background-color: var(--accent);
+  background-color: var(--grey);
   border: none;
   border-radius: 0;
 }
@@ -1663,7 +1665,7 @@ body {
   width: 110%;
   height: 15px;
   opacity: 0;
-  background-color: var(--accent);
+  background-color: var(--grey);
 }
 .outer-nav > li.is-active::before {
   opacity: 1;
@@ -1769,5 +1771,11 @@ small {
   }
   .team-card p {
     margin-bottom: 10px;
+  }
+  .team-card small {
+    display: none;
+  }
+  .contact--lockup {
+    margin-top: 0px;
   }
 }
