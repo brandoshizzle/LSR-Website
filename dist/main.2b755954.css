@@ -1065,7 +1065,7 @@ body {
   content: "";
   position: absolute;
   top: 60px;
-  left: 268px;
+  left: 68px;
   width: 30px;
   height: 30px;
   background-color: var(--grey);
@@ -1185,11 +1185,11 @@ body {
   }
   .about--banner h2::before {
     top: 28px;
-    left: 168px;
+    left: 1168px;
   }
   .about--banner h2::after {
     top: 163px;
-    left: 163px;
+    left: 1163px;
   }
   .about--banner img {
     width: 315px;
@@ -1203,10 +1203,10 @@ body {
     height: auto;
   }
   .about--banner::before {
-    left: 155px;
+    left: 1155px;
   }
   .about--banner::after {
-    left: 310px;
+    left: 3110px;
   }
   .about--banner p {
     font-size: 14px;
@@ -1221,7 +1221,7 @@ body {
   }
   .about--banner h2::after {
     top: 205px;
-    left: 305px;
+    left: 3015px;
   }
   .about--banner img {
     display: none;
